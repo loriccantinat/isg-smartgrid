@@ -1,0 +1,456 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2300 1400 1300 3100
+U 6737BBC9
+F0 "Microcontroller" 50
+F1 "microcontroller.sch" 50
+F2 "SWCLK" I L 2300 2900 50 
+F3 "SWDIO" I L 2300 3100 50 
+F4 "NRST" I L 2300 3200 50 
+F5 "Rx0" I L 2300 1950 50 
+F6 "Tx0" O L 2300 2050 50 
+F7 "H" O R 3600 1950 50 
+F8 "L" O R 3600 2050 50 
+F9 "Ibmes" I R 3600 4150 50 
+F10 "Ipmes" I R 3600 4050 50 
+F11 "Ub" I R 3600 3950 50 
+F12 "Up" I R 3600 3850 50 
+F13 "LEDG" O L 2300 3500 50 
+F14 "Ibflag" I R 3600 4250 50 
+F15 "Tbatt" I R 3600 4350 50 
+$EndSheet
+$Sheet
+S 4800 1400 1100 1650
+U 6737BC0A
+F0 "StepDown" 50
+F1 "stepDown.sch" 50
+F2 "H" I L 4800 1950 50 
+F3 "L" I L 4800 2050 50 
+$EndSheet
+$Sheet
+S 8400 3250 1000 1500
+U 6737BC4B
+F0 "Load" 50
+F1 "load.sch" 50
+F2 "CmdLoad" I L 8400 4450 50 
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 67380B51
+P 1150 3000
+F 0 "J3" H 1068 2575 50  0000 C CNN
+F 1 "SWD" H 1068 2666 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 1150 3000 50  0001 C CNN
+F 3 "~" H 1150 3000 50  0001 C CNN
+	1    1150 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR06
+U 1 1 67381490
+P 1700 2800
+F 0 "#PWR06" H 1700 2650 50  0001 C CNN
+F 1 "+3V3" H 1715 2973 50  0000 C CNN
+F 2 "" H 1700 2800 50  0001 C CNN
+F 3 "" H 1700 2800 50  0001 C CNN
+	1    1700 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 6738273F
+P 1700 3000
+F 0 "#PWR07" H 1700 2750 50  0001 C CNN
+F 1 "GND" H 1705 2827 50  0000 C CNN
+F 2 "" H 1700 3000 50  0001 C CNN
+F 3 "" H 1700 3000 50  0001 C CNN
+	1    1700 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2300 2900 1350 2900
+Wire Wire Line
+	1350 2800 1700 2800
+Wire Wire Line
+	1350 3000 1700 3000
+Wire Wire Line
+	1350 3100 2300 3100
+Wire Wire Line
+	1350 3200 2300 3200
+$Sheet
+S 4200 6100 1500 1000
+U 6738535D
+F0 "PowerSupply" 50
+F1 "powerSupply.sch" 50
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 67385DC5
+P 9650 1550
+F 0 "J5" H 9730 1592 50  0000 L CNN
+F 1 "Battery" H 9730 1501 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 9650 1550 50  0001 C CNN
+F 3 "~" H 9650 1550 50  0001 C CNN
+	1    9650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 673876C9
+P 950 4750
+F 0 "J1" H 868 4425 50  0000 C CNN
+F 1 "SolarPanel" H 868 4516 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 950 4750 50  0001 C CNN
+F 3 "~" H 950 4750 50  0001 C CNN
+	1    950  4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 673891C7
+P 1350 4800
+F 0 "#PWR03" H 1350 4550 50  0001 C CNN
+F 1 "GND" H 1355 4627 50  0000 C CNN
+F 2 "" H 1350 4800 50  0001 C CNN
+F 3 "" H 1350 4800 50  0001 C CNN
+	1    1350 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 2050 4650 2    50   Input ~ 0
+Up
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 6738DABA
+P 1500 6500
+F 0 "J4" H 1418 6175 50  0000 C CNN
+F 1 "AlimExt" H 1418 6266 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1500 6500 50  0001 C CNN
+F 3 "~" H 1500 6500 50  0001 C CNN
+	1    1500 6500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 6738DE56
+P 1900 6600
+F 0 "#PWR09" H 1900 6350 50  0001 C CNN
+F 1 "GND" H 1905 6427 50  0000 C CNN
+F 2 "" H 1900 6600 50  0001 C CNN
+F 3 "" H 1900 6600 50  0001 C CNN
+	1    1900 6600
+	1    0    0    -1  
+$EndComp
+Text GLabel 2150 6400 2    50   Input ~ 0
+Uext
+Wire Wire Line
+	2150 6400 1700 6400
+Wire Wire Line
+	1700 6500 1900 6500
+Wire Wire Line
+	1900 6500 1900 6600
+$Comp
+L power:+3V3 #PWR04
+U 1 1 67391145
+P 1700 1850
+F 0 "#PWR04" H 1700 1700 50  0001 C CNN
+F 1 "+3V3" H 1715 2023 50  0000 C CNN
+F 2 "" H 1700 1850 50  0001 C CNN
+F 3 "" H 1700 1850 50  0001 C CNN
+	1    1700 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 67392266
+P 1700 2250
+F 0 "#PWR05" H 1700 2000 50  0001 C CNN
+F 1 "GND" H 1705 2077 50  0000 C CNN
+F 2 "" H 1700 2250 50  0001 C CNN
+F 3 "" H 1700 2250 50  0001 C CNN
+	1    1700 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2300 1950 1350 1950
+Wire Wire Line
+	1350 2050 2300 2050
+Wire Wire Line
+	1350 1850 1700 1850
+Wire Wire Line
+	3600 1950 4800 1950
+Wire Wire Line
+	3600 2050 4800 2050
+Text GLabel 8550 1450 0    50   Input ~ 0
+Ubatt
+Wire Wire Line
+	9450 1550 8700 1550
+Text Label 8700 1550 0    50   ~ 0
+NTCbatt
+Wire Wire Line
+	9300 1450 9400 1450
+$Comp
+L power:GND #PWR010
+U 1 1 673D4103
+P 8050 1950
+F 0 "#PWR010" H 8050 1700 50  0001 C CNN
+F 1 "GND" H 8055 1777 50  0000 C CNN
+F 2 "" H 8050 1950 50  0001 C CNN
+F 3 "" H 8050 1950 50  0001 C CNN
+	1    8050 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 67419C02
+P 1700 4650
+F 0 "R2" V 1907 4650 50  0000 C CNN
+F 1 "100m" V 1816 4650 50  0000 C CNN
+F 2 "customFootprints:R_2512_6332Metric_Custom_HandSolder" V 1630 4650 50  0001 C CNN
+F 3 "~" H 1700 4650 50  0001 C CNN
+	1    1700 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6741E88B
+P 9150 1450
+F 0 "R5" V 9350 1450 50  0000 C CNN
+F 1 "100m" V 9250 1450 50  0000 C CNN
+F 2 "customFootprints:R_2512_6332Metric_Custom_HandSolder" V 9080 1450 50  0001 C CNN
+F 3 "~" H 9150 1450 50  0001 C CNN
+	1    9150 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 4050 3600 4050
+Wire Wire Line
+	5200 4150 3600 4150
+Text Label 6600 4000 0    50   ~ 0
+NTCbatt
+Wire Wire Line
+	6600 4000 6400 4000
+Wire Wire Line
+	5200 3950 3600 3950
+Wire Wire Line
+	5200 3850 3600 3850
+Text Label 1700 2150 0    50   ~ 0
+CmdLoad
+Text Label 8100 4450 2    50   ~ 0
+CmdLoad
+Wire Wire Line
+	8100 4450 8400 4450
+$Comp
+L Device:LED D2
+U 1 1 673C9430
+P 1800 3650
+F 0 "D2" V 1839 3532 50  0000 R CNN
+F 1 "GREEN" V 1748 3532 50  0000 R CNN
+F 2 "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 1800 3650 50  0001 C CNN
+F 3 "~" H 1800 3650 50  0001 C CNN
+	1    1800 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 673C9D2D
+P 1800 3950
+F 0 "R4" H 1870 3996 50  0000 L CNN
+F 1 "2k5" H 1870 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1730 3950 50  0001 C CNN
+F 3 "~" H 1800 3950 50  0001 C CNN
+	1    1800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 673CA1DA
+P 1800 4100
+F 0 "#PWR08" H 1800 3850 50  0001 C CNN
+F 1 "GND" H 1805 3927 50  0000 C CNN
+F 2 "" H 1800 4100 50  0001 C CNN
+F 3 "" H 1800 4100 50  0001 C CNN
+	1    1800 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3500 1800 3500
+Wire Wire Line
+	1150 4750 1350 4750
+Wire Wire Line
+	1350 4750 1350 4800
+Wire Wire Line
+	1850 4650 1950 4650
+Wire Wire Line
+	1150 4650 1450 4650
+Wire Wire Line
+	1950 4650 1950 5150
+Wire Wire Line
+	1950 5150 5200 5150
+Connection ~ 1950 4650
+Wire Wire Line
+	1950 4650 2050 4650
+Wire Wire Line
+	1450 4650 1450 5250
+Wire Wire Line
+	1450 5250 5200 5250
+Connection ~ 1450 4650
+Wire Wire Line
+	1450 4650 1550 4650
+$Comp
+L Device:R R3
+U 1 1 673E1940
+P 1700 4800
+F 0 "R3" V 1500 4800 50  0000 C CNN
+F 1 "100m" V 1600 4800 50  0000 C CNN
+F 2 "customFootprints:R_2512_6332Metric_Custom_HandSolder" V 1630 4800 50  0001 C CNN
+F 3 "~" H 1700 4800 50  0001 C CNN
+	1    1700 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1550 4800 1550 4650
+Connection ~ 1550 4650
+Wire Wire Line
+	1850 4800 1850 4650
+Connection ~ 1850 4650
+Wire Wire Line
+	9000 1450 8900 1450
+Text Label 8900 950  0    50   ~ 0
+Ibmesp
+Text Label 9400 950  0    50   ~ 0
+Ibmesm
+Wire Wire Line
+	9400 950  9400 1450
+Connection ~ 9400 1450
+Wire Wire Line
+	9400 1450 9450 1450
+Wire Wire Line
+	8900 1450 8900 950 
+Connection ~ 8900 1450
+Wire Wire Line
+	8900 1450 8550 1450
+Text Label 6600 4200 0    50   ~ 0
+Ibmesp
+Text Label 6600 4100 0    50   ~ 0
+Ibmesm
+Wire Wire Line
+	6400 4100 6600 4100
+Wire Wire Line
+	6400 4200 6600 4200
+Wire Wire Line
+	5200 4250 3600 4250
+$Comp
+L MPPT_TP:4US1R202M2RN U1
+U 1 1 67487017
+P 8850 2150
+F 0 "U1" V 8700 2350 50  0000 L CNN
+F 1 "4US1R202M2RN" V 8800 2350 50  0000 L CNN
+F 2 "customFootprints:Switch_4US1R202M2RN_THT" H 8850 2150 50  0001 C CNN
+F 3 "" H 8850 2150 50  0001 C CNN
+	1    8850 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 1650 8850 1650
+Wire Wire Line
+	8850 1650 8850 1800
+Wire Wire Line
+	8050 1650 8050 1950
+NoConn ~ 8950 1800
+Wire Wire Line
+	8750 1650 8750 1800
+Wire Wire Line
+	8050 1650 8750 1650
+$Comp
+L Device:LED D1
+U 1 1 67537173
+P 1300 3650
+F 0 "D1" V 1339 3532 50  0000 R CNN
+F 1 "GREEN" V 1248 3532 50  0000 R CNN
+F 2 "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 1300 3650 50  0001 C CNN
+F 3 "~" H 1300 3650 50  0001 C CNN
+	1    1300 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 67537297
+P 1300 3950
+F 0 "R1" H 1370 3996 50  0000 L CNN
+F 1 "10k" H 1370 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1230 3950 50  0001 C CNN
+F 3 "~" H 1300 3950 50  0001 C CNN
+	1    1300 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 675372A1
+P 1300 4100
+F 0 "#PWR02" H 1300 3850 50  0001 C CNN
+F 1 "GND" H 1305 3927 50  0000 C CNN
+F 2 "" H 1300 4100 50  0001 C CNN
+F 3 "" H 1300 4100 50  0001 C CNN
+	1    1300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR01
+U 1 1 6753BD77
+P 1300 3500
+F 0 "#PWR01" H 1300 3350 50  0001 C CNN
+F 1 "+12V" H 1315 3673 50  0000 C CNN
+F 2 "" H 1300 3500 50  0001 C CNN
+F 3 "" H 1300 3500 50  0001 C CNN
+	1    1300 3500
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5200 3750 1200 1600
+U 673D7FF2
+F0 "Sensors" 50
+F1 "sensors.sch" 50
+F2 "Ipmes" O L 5200 4050 50 
+F3 "NTCbatt" I R 6400 4000 50 
+F4 "Up" O L 5200 3850 50 
+F5 "Ub" O L 5200 3950 50 
+F6 "Ipmesp" I L 5200 5250 50 
+F7 "Ipmesm" I L 5200 5150 50 
+F8 "Ibmes" O L 5200 4150 50 
+F9 "Ibmesp" I R 6400 4200 50 
+F10 "Ibmesm" I R 6400 4100 50 
+F11 "Ibflag" O L 5200 4250 50 
+F12 "Tbatt" O L 5200 4350 50 
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 67545CB9
+P 1150 2050
+F 0 "J2" H 1068 1625 50  0000 C CNN
+F 1 "UART0" H 1068 1716 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 1150 2050 50  0001 C CNN
+F 3 "~" H 1150 2050 50  0001 C CNN
+	1    1150 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 2250 1350 2250
+Wire Wire Line
+	1350 2150 1700 2150
+Wire Wire Line
+	5200 4350 3600 4350
+$EndSCHEMATC

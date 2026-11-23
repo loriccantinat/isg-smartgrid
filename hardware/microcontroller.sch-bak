@@ -1,0 +1,305 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5350 3000 2    50   Input ~ 0
+SWCLK
+Text HLabel 5350 2900 2    50   Input ~ 0
+SWDIO
+Text HLabel 3950 1900 0    50   Input ~ 0
+NRST
+Text HLabel 5350 2200 2    50   Input ~ 0
+Rx0
+Text HLabel 5350 2100 2    50   Output ~ 0
+Tx0
+Text HLabel 5350 2800 2    50   Output ~ 0
+H
+Text HLabel 4350 3000 0    50   Output ~ 0
+L
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px U2
+U 1 1 673980FB
+P 4850 2400
+F 0 "U2" H 4750 2300 50  0000 C CNN
+F 1 "STM32F030F4Px" H 4750 2400 50  0000 C CNN
+F 2 "customFootprints:TSSOP-20_4.4x6.5mm_P0.65mm_HandSolder" H 4450 1700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 4850 2400 50  0001 C CNN
+	1    4850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 6739A9F3
+P 3100 2650
+F 0 "Y1" V 3054 2781 50  0000 L CNN
+F 1 "8MHz" V 3145 2781 50  0000 L CNN
+F 2 "customFootprints:Crystal_SMD_HC49S_12.7x5mm" H 3100 2650 50  0001 C CNN
+F 3 "~" H 3100 2650 50  0001 C CNN
+	1    3100 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 6739C6D4
+P 3600 2500
+F 0 "C1" H 3692 2546 50  0000 L CNN
+F 1 "15p" H 3692 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3600 2500 50  0001 C CNN
+F 3 "~" H 3600 2500 50  0001 C CNN
+	1    3600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 6739CC89
+P 3600 3000
+F 0 "C2" H 3692 3046 50  0000 L CNN
+F 1 "15p" H 3692 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3600 3000 50  0001 C CNN
+F 3 "~" H 3600 3000 50  0001 C CNN
+	1    3600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 6739FCD3
+P 3600 2600
+F 0 "#PWR011" H 3600 2350 50  0001 C CNN
+F 1 "GND" H 3605 2427 50  0000 C CNN
+F 2 "" H 3600 2600 50  0001 C CNN
+F 3 "" H 3600 2600 50  0001 C CNN
+	1    3600 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 673A018F
+P 3600 3100
+F 0 "#PWR012" H 3600 2850 50  0001 C CNN
+F 1 "GND" H 3605 2927 50  0000 C CNN
+F 2 "" H 3600 3100 50  0001 C CNN
+F 3 "" H 3600 3100 50  0001 C CNN
+	1    3600 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2700 4050 2700
+Wire Wire Line
+	4050 2700 4050 2400
+Wire Wire Line
+	4050 2400 3600 2400
+Wire Wire Line
+	3600 2400 3100 2400
+Wire Wire Line
+	3100 2400 3100 2500
+Connection ~ 3600 2400
+Wire Wire Line
+	3100 2800 3100 2900
+Wire Wire Line
+	3100 2900 3600 2900
+Wire Wire Line
+	3600 2900 4050 2900
+Wire Wire Line
+	4050 2900 4050 2800
+Wire Wire Line
+	4050 2800 4350 2800
+Connection ~ 3600 2900
+Text Label 3150 2400 0    50   ~ 0
+Crystal-
+Text Label 3150 2900 0    50   ~ 0
+Crystal+
+$Comp
+L Device:C_Small C3
+U 1 1 673A993A
+P 4050 2000
+F 0 "C3" H 4142 2046 50  0000 L CNN
+F 1 "100n" H 4142 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4050 2000 50  0001 C CNN
+F 3 "~" H 4050 2000 50  0001 C CNN
+	1    4050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 673AB9E3
+P 4200 2100
+F 0 "#PWR013" H 4200 1850 50  0001 C CNN
+F 1 "GND" H 4205 1927 50  0000 C CNN
+F 2 "" H 4200 2100 50  0001 C CNN
+F 3 "" H 4200 2100 50  0001 C CNN
+	1    4200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2100 4200 2100
+Wire Wire Line
+	4200 2100 4050 2100
+Connection ~ 4200 2100
+Wire Wire Line
+	3950 1900 4050 1900
+Wire Wire Line
+	4050 1900 4350 1900
+Connection ~ 4050 1900
+Text Label 4850 1550 1    50   ~ 0
+VDD
+Text Label 4950 1550 1    50   ~ 0
+VDDA
+Wire Wire Line
+	4950 1550 4950 1700
+Wire Wire Line
+	4850 1550 4850 1700
+$Comp
+L Device:C_Small C7
+U 1 1 673B3DF0
+P 8150 2400
+F 0 "C7" H 8242 2446 50  0000 L CNN
+F 1 "100n" H 8242 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8150 2400 50  0001 C CNN
+F 3 "~" H 8150 2400 50  0001 C CNN
+	1    8150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 673B3EDE
+P 8150 2600
+F 0 "#PWR018" H 8150 2350 50  0001 C CNN
+F 1 "GND" H 8155 2427 50  0000 C CNN
+F 2 "" H 8150 2600 50  0001 C CNN
+F 3 "" H 8150 2600 50  0001 C CNN
+	1    8150 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2600 8150 2500
+Wire Wire Line
+	8150 2300 8500 2300
+Text Label 8500 2300 0    50   ~ 0
+VDDA
+$Comp
+L Device:C_Small C5
+U 1 1 673BE334
+P 7700 2400
+F 0 "C5" H 7792 2446 50  0000 L CNN
+F 1 "1u" H 7792 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7700 2400 50  0001 C CNN
+F 3 "~" H 7700 2400 50  0001 C CNN
+	1    7700 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2300 8150 2300
+Connection ~ 8150 2300
+Wire Wire Line
+	7700 2500 8150 2500
+Connection ~ 8150 2500
+$Comp
+L power:+3V3 #PWR016
+U 1 1 673BF92A
+P 7500 2300
+F 0 "#PWR016" H 7500 2150 50  0001 C CNN
+F 1 "+3V3" H 7515 2473 50  0000 C CNN
+F 2 "" H 7500 2300 50  0001 C CNN
+F 3 "" H 7500 2300 50  0001 C CNN
+	1    7500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2300 7700 2300
+Connection ~ 7700 2300
+$Comp
+L Device:C_Small C6
+U 1 1 673C405C
+P 8150 1500
+F 0 "C6" H 8242 1546 50  0000 L CNN
+F 1 "100n" H 8242 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8150 1500 50  0001 C CNN
+F 3 "~" H 8150 1500 50  0001 C CNN
+	1    8150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 673C4138
+P 8150 1700
+F 0 "#PWR017" H 8150 1450 50  0001 C CNN
+F 1 "GND" H 8155 1527 50  0000 C CNN
+F 2 "" H 8150 1700 50  0001 C CNN
+F 3 "" H 8150 1700 50  0001 C CNN
+	1    8150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 1700 8150 1600
+Wire Wire Line
+	8150 1400 8500 1400
+Text Label 8500 1400 0    50   ~ 0
+VDD
+$Comp
+L Device:C_Small C4
+U 1 1 673C4145
+P 7700 1500
+F 0 "C4" H 7792 1546 50  0000 L CNN
+F 1 "1u" H 7792 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7700 1500 50  0001 C CNN
+F 3 "~" H 7700 1500 50  0001 C CNN
+	1    7700 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1400 8150 1400
+Connection ~ 8150 1400
+Wire Wire Line
+	7700 1600 8150 1600
+Connection ~ 8150 1600
+$Comp
+L power:+3V3 #PWR015
+U 1 1 673C4153
+P 7500 1400
+F 0 "#PWR015" H 7500 1250 50  0001 C CNN
+F 1 "+3V3" H 7515 1573 50  0000 C CNN
+F 2 "" H 7500 1400 50  0001 C CNN
+F 3 "" H 7500 1400 50  0001 C CNN
+	1    7500 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 1400 7700 1400
+Connection ~ 7700 1400
+$Comp
+L power:GND #PWR014
+U 1 1 673D241F
+P 4850 3200
+F 0 "#PWR014" H 4850 2950 50  0001 C CNN
+F 1 "GND" H 4855 3027 50  0000 C CNN
+F 2 "" H 4850 3200 50  0001 C CNN
+F 3 "" H 4850 3200 50  0001 C CNN
+	1    4850 3200
+	1    0    0    -1  
+$EndComp
+Text HLabel 5350 2000 2    50   Input ~ 0
+Ipmes
+Text HLabel 5350 2500 2    50   Input ~ 0
+Ibmes
+Text HLabel 5350 2300 2    50   Input ~ 0
+Ub
+Text HLabel 5350 1900 2    50   Input ~ 0
+Up
+Text HLabel 5350 2600 2    50   Output ~ 0
+LEDG
+Text HLabel 5350 2700 2    50   Input ~ 0
+Ibflag
+Text HLabel 5350 2400 2    50   Input ~ 0
+Tbatt
+$EndSCHEMATC
